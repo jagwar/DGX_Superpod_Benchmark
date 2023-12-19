@@ -8,8 +8,6 @@
 #SBATCH --error=logs/%x_%j.err
 set -x -e
 
-source /lustre/scwpod02/client/huggingface/start_bench
-conda activate p5-bench
 CUDA_VERSION=12.0
 #NCCL_TEST_PATH=/usr/local/cuda-${CUDA_VERSION}/efa/test-cuda-${CUDA_VERSION}
 # do not remove or the training will hang and nodes will be lost w/o this workaround
